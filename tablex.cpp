@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 
+void cetak_perkalian(int);
+
 main ()
 {
     // Algo :
@@ -11,10 +13,14 @@ main ()
 
   int input;
   cin >> input;
-  for (int i=1;i<=input;i++){
-      for (int j=1;j<=input;j++){
-          cout << i*j << "\t";
-      }
-      cout << "\n";
-  }
+  cetak_perkalian(input);
+}
+
+void cetak_perkalian (int input){
+    for (int i=1;i<=input;i++){
+        for (int j=1;j<=input;j++){
+            cout << i*j << "\t";
+        }
+        cout << "\n";
+    }
 }

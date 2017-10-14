@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 
+void enkripsi(string);
+
 main ()
 {
     // algo :
@@ -14,16 +16,19 @@ main ()
     // 7. selain itu maka dicetak dengan penambahan nilai ASCII +10
 
   string input;
-  int i;
   getline(cin, input);
-  for (i=0;i < input.size();i++){
-    if (input[i] < 65 || input[i] >90){
-        cout << char(input[i]);
-    }else if (input[i] > 80){
-        cout << char(input[i]-16);    
-    }else{
-        cout << char(input[i]+10);
-    }
-  }
-  cout << "\n";
+  enkripsi(input);
+}
+
+void enkripsi(string input){
+    for (int i=0;i < input.size();i++){
+        if (input[i] < 65 || input[i] >90){
+            cout << char(input[i]);
+        }else if (input[i] > 80){
+            cout << char(input[i]-16);    
+        }else{
+            cout << char(input[i]+10);
+        }
+      }
+      cout << "\n";
 }
