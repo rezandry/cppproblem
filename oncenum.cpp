@@ -15,9 +15,11 @@ main(){
         for (j=i+1;j<num.size();j++){
             if (num[i] == num[j]){
                 found++;
+                cout << "j:" << found << "\n";
             }
         }
         if (found == 0){
+            cout << found << " - " << num[i] << " - " << arrayIndex << "\n";
             a[arrayIndex] = num[i];
             arrayIndex++;
         }
